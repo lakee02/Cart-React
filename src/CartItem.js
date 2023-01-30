@@ -1,29 +1,36 @@
 import React from "react";
 
 class CartItem extends React.Component{
-    constructor (){
-        super();
-        this.state={
-            price:6969,
-            title:'Nokia 1200',
-            qty:1,
-            img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4qae522N2EzJZbdyGdnALi-BAirqdp8cZc55VoDDtQ&s'
-        }
-    }
+    
     increaseQuantity=()=>{
-       // console.log("hii")
-       // setState form 1
+       
        this.setState({
         qty:this.state.qty +1
        })
     }
     decreaseQuantity=()=>{
+        const {qty}=this.state;
+        if(qty===0){
+            return;
+        }
         this.setState({
             qty:this.state.qty -1
         })
     }
+    // testing(){
+    //     const promise=new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             resolve('done');
+    //         },5000)
+    //     });
+    //     promise.then(()=>{
+    //         this.setState({qty:100});
+    //         console.log('state',this.state);
+    //     })
+    // }
     render(){
-        const {price,title,qty,img}=this.state;
+        console.log(this.setState);
+        const {price,title,qty,img}=this.props.product;
         return(
             <div className="cart-item">
                 <div className="left-block">
@@ -55,17 +62,6 @@ class CartItem extends React.Component{
         );
     }
 }
-
-const style={
-    image: {
-        height:110,
-        width:110,
-        borderRadius:4,
-        background:'#ccc'
-    }
-}
-
-
 
 
 export default CartItem;
