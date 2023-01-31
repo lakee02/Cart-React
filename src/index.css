@@ -10,6 +10,8 @@ body {
 .cart-item{
   display: inline-flex;
   margin: 20px 10px;
+  background-color: antiquewhite;
+  border-radius: 5px;
 }
 .cart-item .right-block{
   padding: 0 20px;
@@ -28,4 +30,12 @@ body {
 .cart{
   display: flex;
   flex-direction: row;
+  background-color: rgb(164, 152, 240);
+  padding: 4px;
+}
+.left-block img{
+  height: 160px;
+  width: 150px;
+  border-radius: 10px;
+  padding: 6px;
 }

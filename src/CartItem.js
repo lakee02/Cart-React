@@ -2,21 +2,21 @@ import React from "react";
 
 class CartItem extends React.Component{
     
-    increaseQuantity=()=>{
+    // increaseQuantity=()=>{
        
-       this.setState({
-        qty:this.state.qty +1
-       })
-    }
-    decreaseQuantity=()=>{
-        const {qty}=this.state;
-        if(qty===0){
-            return;
-        }
-        this.setState({
-            qty:this.state.qty -1
-        })
-    }
+    //    this.setState({
+    //     qty:this.state.qty +1
+    //    })
+    // }
+    // decreaseQuantity=()=>{
+    //     const {qty}=this.state;
+    //     if(qty===0){
+    //         return;
+    //     }
+    //     this.setState({
+    //         qty:this.state.qty -1
+    //     })
+    // }
     // testing(){
     //     const promise=new Promise((resolve,reject)=>{
     //         setTimeout(()=>{
@@ -45,12 +45,14 @@ class CartItem extends React.Component{
                         <img alt="increase"
                          className="action-icons"
                           src="https://cdn-icons-png.flaticon.com/512/992/992651.png"
-                          onClick={this.increaseQuantity.bind(this)}
+                        //   onClick={this.increaseQuantity.bind(this)}
+                          onClick={()=>this.props.onIncreaseQuantity(this.props.product)}
                           />
                         <img alt="decrease"
                          className="action-icons"
                          src="https://cdn-icons-png.flaticon.com/512/992/992683.png" 
-                         onClick={this.decreaseQuantity.bind(this)}
+                        //  onClick={this.decreaseQuantity.bind(this)}
+                        onClick={()=>this.props.onDecreaseQuantity(this.props.product)}
                          />
                         <img alt="delete"
                          className="action-icons"
