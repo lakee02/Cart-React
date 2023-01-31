@@ -6,10 +6,10 @@ class Cart extends React.Component{
         this.state={
            products:[
             {
-                price:6969,
-                title:'Nokia 1200',
+                price:69699,
+                title:'I pad',
                 qty:1,
-                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4qae522N2EzJZbdyGdnALi-BAirqdp8cZc55VoDDtQ&s',
+                img:'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-select-wifi-purple-202109_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&.v=1629840706000',
                 id:1,
             },
             {
@@ -27,10 +27,10 @@ class Cart extends React.Component{
                 id:3,
             },
             {
-                price:6969,
-                title:'Nokia 1200',
+                price:69999,
+                title:'Apple Headphone',
                 qty:1,
-                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4qae522N2EzJZbdyGdnALi-BAirqdp8cZc55VoDDtQ&s',
+                img:'https://media.currys.biz/i/currysprod/M10207224_silver-grey?$l-large$&fmt=auto',
                 id:4,
             }
            ]
