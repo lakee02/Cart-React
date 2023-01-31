@@ -12,6 +12,7 @@ body {
   margin: 20px 10px;
   background-color: antiquewhite;
   border-radius: 5px;
+  width: 300px;
 }
 .cart-item .right-block{
   padding: 0 20px;
@@ -29,9 +30,12 @@ body {
 }
 .cart{
   display: flex;
-  flex-direction: row;
-  background-color: rgb(164, 152, 240);
-  padding: 4px;
+  flex-direction: column;
+  background-color: rgb(170, 236, 245);
+  margin: 20px;
+  width: 350px;
+  border: 2px groove black;
+  border-radius: 10px;
 }
 .left-block img{
   height: 160px;
