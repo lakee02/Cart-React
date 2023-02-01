@@ -10,7 +10,7 @@ body {
 .cart-item{
   display: inline-flex;
   margin: 20px 10px;
-  background-color: antiquewhite;
+  background-color: #f9f6cb;
   border-radius: 5px;
   width: 300px;
 }
