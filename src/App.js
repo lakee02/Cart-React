@@ -79,6 +79,15 @@ getCartCount=()=>{
   })
   return count;
 }
+getCartTotal=()=>{
+  const{products}=this.state;
+  let cartTotal=0;
+
+  products.map((product)=>{
+    cartTotal = cartTotal+product.qty*product.price;
+  })
+  return cartTotal;
+}
   render(){
     const {products}=this.state;
     return (
@@ -86,12 +95,16 @@ getCartCount=()=>{
         
         {/* <CartItem /> */}
         <Navbar count={this.getCartCount()}/>
+        <div style={{padding:10,fontSize:20}}>
+          Total:{this.getCartTotal()}
+        </div>
         <Cart
         products={products}
         onIncreaseQuantity={this.handleIncreaseQuantity}
         onDecreaseQuantity={this.handleDecreseQuantity} 
         onDeleteProduct={this.handleDeleteProduct}
         />
+        
       </div>
     );
   }
